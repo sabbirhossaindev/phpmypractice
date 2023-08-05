@@ -1,5 +1,6 @@
 <?php
 // php variable example;
+echo('<h3>PHP variable Example</h3> <hr>');
 
 echo "হ্যালো বাংলাদেশ!";
 echo "হ্যালো পিএইচপি!<br>";
@@ -16,6 +17,7 @@ echo number;
 echo "<br>";
 
 // php date tipe;
+echo('<h3>PHP data type Example</h3> <hr>');
 /*
 ভ্যারিয়েবলের মধ্যে বিভিন্ন টাইপের ডেটা রাখা যায় এবং ভিন্ন ভিন্ন ডেটার মাধ্যমে ভিন্ন ভিন্ন কাজ করা যায়।
 পিএইচপিতে নিম্নোক্ত ডেটা টাইপ সাপোর্ট করেঃ
@@ -81,17 +83,60 @@ echo "<br>";
 রিসোর্স ডেটা টাইপ এর সাধারণ উদাহরণ হলো ডেটাবেজ কল করা।
 */
 
-//পিএইচপি কনস্ট্যান্ট তৈরি
+echo('<h3>PHP কনস্ট্যান্ট তৈরি Example</h3> <hr>');
+
 //case-sensitive কনস্ট্যান্ট ডিফাইন
-define("GREETING", "sabbir.com এ আপনাকে স্বাগতম!");
+define("GREETING", "case-sensitive কনস্ট্যান্ট ডিফাইন");
 echo GREETING . "<br>" . "<br>";
 echo GREETING;
 echo "<br>";
 
 //case-insensitive কনস্ট্যান্ট ডিফাইন
-define("START", "case-insensitive.com এ আপনাকে স্বাগতম!",);
+define("START", "case-insensitive কনস্ট্যান্ট ডিফাইন",);
 echo START . "<br>" . "<br>";
 echo START;
 
+//কনস্ট্যান্ট এর স্কোপ স্বয়ংক্রিয়ভাবেই গ্লোবাল এবং সমগ্র স্ক্রিপ্ট জুড়েই এটিকে ব্যবহার করা যায়।
+define("CONCATE", "কনস্ট্যান্ট সর্বদাই গ্লোবাল!");
+function localScope(){
+    echo CONCATE;
+}
+localScope();
+
+echo "<br>";
+
+echo('<h3>PHP Operators Example</h3> <hr>');
+/*
+	Arithmetic অপারেটরঃ গানিতিক হিসাব-নিকাশ করে।
+    Assignment অপারেটরঃ ভ্যারিয়েবলে ভ্যালু এসাইন/জমা করে।
+    Comparison অপারেটরঃ দুই বা ততোধিক ভ্যালুর তুলনা করে।
+    Increment/Decrement অপারেটরঃ ভ্যালু এক বৃদ্ধি/হ্রাস করে।
+    Logical অপারেটরঃ সিন্ধান্ত গ্রহণে সহায়তা করে।
+    String অপারেটরঃ স্ট্রিং এসাইন এবং দুটি স্ট্রিং একত্রিত করে।
+    array অপারেটরঃ array এর মধ্যে তুলনা করে।
+*/
+echo('<p>PHP Arithmetic Operators</p>');
+echo ('+, - , *, /, %, ** <br>');
+
+echo('<p>PHP Assignment Operators</p>');
+echo ('=, += , -=, *=, /=, %=');
+
+echo('<p>PHP Comparison Operators</p>');
+echo ('==, === , !=, <>, !==, >, <, >=, <=, <=>');
+
+echo('<p>PHP Increment / Decrement Operators</p>');
+echo ('++$x, $x++, --$x, $x--');
+
+echo('<p>PHP Logical Operators</p>');
+echo ('and, or, xor, &&, ||, !');
+
+echo('<p>PHP String Operators</p>');
+echo ('., .='); 
+
+echo('<p>PHP Array Operators</p>');
+echo ('+, ==, ===, !=, <>, !=='); 
+
+echo('<p>PHP Conditional Assignment Operators</p>');
+echo ('?:, ??');
 
 ?>
