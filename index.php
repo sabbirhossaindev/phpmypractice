@@ -81,5 +81,17 @@ echo "<br>";
 রিসোর্স ডেটা টাইপ এর সাধারণ উদাহরণ হলো ডেটাবেজ কল করা।
 */
 
+//পিএইচপি কনস্ট্যান্ট তৈরি
+//case-sensitive কনস্ট্যান্ট ডিফাইন
+define("GREETING", "sabbir.com এ আপনাকে স্বাগতম!");
+echo GREETING . "<br>" . "<br>";
+echo GREETING;
+echo "<br>";
+
+//case-insensitive কনস্ট্যান্ট ডিফাইন
+define("START", "case-insensitive.com এ আপনাকে স্বাগতম!",);
+echo START . "<br>" . "<br>";
+echo START;
+
 
 ?>
