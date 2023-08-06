@@ -139,4 +139,14 @@ echo ('+, ==, ===, !=, <>, !==');
 echo('<p>PHP Conditional Assignment Operators</p>');
 echo ('?:, ??');
 
+//Function Example
+echo('<h3>PHP Function Example</h3> <hr>');
+// function functionName() {
+//     সম্পাদিত কোড ; // syntax
+// }
+function welcomeMsg(){
+    echo "Welcome Guest";
+}
+welcomeMsg(); // ফাংশন কল 
+
 ?>
