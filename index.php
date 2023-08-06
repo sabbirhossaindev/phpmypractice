@@ -148,5 +148,27 @@ function welcomeMsg(){
     echo "Welcome Guest";
 }
 welcomeMsg(); // ফাংশন কল 
+echo "<br>";
+
+// parameter Example;
+function familyMember($name) {
+    echo "Family member name:-  $name<br>";
+}
+
+familyMember("Sabbir");
+familyMember("Nadim");
+familyMember("Baba");
+familyMember("Mama");
+familyMember("Azmin");
+
+
 
 ?>
+
+<!-- <?php
+$user_name = "codemanbd";
+$user_email = "sodemanbd@gail.com";
+
+echo $user_name. "<br>" .$user_email;
+
+?> -->
