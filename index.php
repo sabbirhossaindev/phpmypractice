@@ -178,5 +178,21 @@ function numberOfSum(){
 }
 numberOfSum();
 
+echo "<br>";
+
+// global variable for function
+$age = 21;
+function myAge(){
+    global $age;
+    echo "My Age: ". $age;
+}
+myAge();
+
+// ai 4 ta diya ak file hote onno file a dta adan prodan kore jay
+// include('');
+// include_once('');
+// require('');
+// require_once('');
+
 
 ?>
