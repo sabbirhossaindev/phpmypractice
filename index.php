@@ -161,14 +161,22 @@ familyMember("Baba");
 familyMember("Mama");
 familyMember("Azmin");
 
+echo "<br>";
+function setNumber($number = 5){
+    echo "Number is $number <br>";
+}
+setNumber(15);
+setNumber(10);
+setNumber(); // এটি ডিফল্ট মানটি নিবে
+
+// function number Of Sum and concate
+function numberOfSum(){
+    $courseFeeOne = 6000;
+    $courseFeeTwo = 3000;
+    $Interning = 1500;
+    echo "Total Need Amount: " .$courseFeeOne + $courseFeeTwo + $Interning;
+}
+numberOfSum();
 
 
 ?>
-
-<!-- <?php
-$user_name = "codemanbd";
-$user_email = "sodemanbd@gail.com";
-
-echo $user_name. "<br>" .$user_email;
-
-?> -->
