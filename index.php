@@ -1,5 +1,13 @@
 <?php
 // php variable example;
+
+
+// ai 4 ta diya ak file hote onno file a dta adan prodan kore jay
+// include('');
+// include_once('');
+// require('');
+// require_once('');
+
 echo('<h3>PHP variable Example</h3> <hr>');
 
 echo "হ্যালো বাংলাদেশ!";
@@ -187,12 +195,39 @@ function myAge(){
     echo "My Age: ". $age;
 }
 myAge();
+echo "<br>";
+//Super globle scope Example
+echo('<h3>PHP Super globle scope Example</h3> <hr>');
 
-// ai 4 ta diya ak file hote onno file a dta adan prodan kore jay
-// include('');
-// include_once('');
-// require('');
-// require_once('');
+$numberOne = 55;
+$numberTwo = 44;
+
+function sum(){
+	$GLOBALS['total'] = $GLOBALS['numberOne'] + $GLOBALS['numberTwo'];
+}
+
+sum();
+echo "GLOBLE:- The sum of ".$total;
+echo "<br>";
+
+
+echo $_SERVER['PHP_SELF']. "<br>";
+echo $_SERVER['SERVER_NAME']. "<br>";
+echo $_SERVER['HTTP_HOST']. "<br>";
+echo $_SERVER['HTTP_REFERER']. "<br>";
+echo $_SERVER['HTTP_USER_AGENT']. "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+echo "<br>";
+
+//php array Example
+echo('<h3>PHP Array Example</h3> <hr>');
+
+echo"Index array <br>";
+$subject = array("এইচটিএমএল", "সিএসএস", "জাভাস্ক্রিপ্ট", "পিএইচপি");
+echo $subject['0'].'<br>';
+echo $subject['1'].'<br>';
+echo $subject['2'].'<br>';
+echo $subject['3'].'<br>';
 
 
 ?>
