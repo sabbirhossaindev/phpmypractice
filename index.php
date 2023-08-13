@@ -214,7 +214,6 @@ echo "<br>";
 echo $_SERVER['PHP_SELF']. "<br>";
 echo $_SERVER['SERVER_NAME']. "<br>";
 echo $_SERVER['HTTP_HOST']. "<br>";
-echo $_SERVER['HTTP_REFERER']. "<br>";
 echo $_SERVER['HTTP_USER_AGENT']. "<br>";
 echo $_SERVER['SCRIPT_NAME'];
 echo "<br>";
@@ -222,12 +221,39 @@ echo "<br>";
 //php array Example
 echo('<h3>PHP Array Example</h3> <hr>');
 
-echo"Index array <br>";
+echo"<b>Index array</b> <br>";
 $subject = array("এইচটিএমএল", "সিএসএস", "জাভাস্ক্রিপ্ট", "পিএইচপি");
 echo $subject['0'].'<br>';
 echo $subject['1'].'<br>';
 echo $subject['2'].'<br>';
 echo $subject['3'].'<br>';
 
+echo "<br>";
 
+$subject = array("এইচটিএমএল","সিএসএস","জাভাস্ক্রিপ্ট","পিএইচপি");
+	echo "আমি ". $subject[0]. ", " . $subject[1] . ", " . $subject[2] . ", " . $subject[3] . " ইত্যাদি" . " শিখতে চাই।";
+echo "<br>";
+
+$subject = array("এইচটিএমএল","সিএসএস","জাভাস্ক্রিপ্ট","পিএইচপি");
+echo count($subject);
+echo "<br>";
+
+$subject = array("এইচটিএমএল","সিএসএস","জাভাস্ক্রিপ্ট","পিএইচপি");
+	$arraylength = count($subject);
+
+for($i = 0; $i < $arraylength; $i++) {
+    echo $subject[$i];
+    echo "<br>";
+}
+
+echo "<b>পিএইচপি Associative Array</b> <br>";
+
+$age = array("Aziz"=>"32", "Saleh"=>"23", "Zehad"=>"22");
+	echo "সালেহর বয়স " . $age['Saleh'] . " বছর।";
+echo "<br>";
+
+$age = array("Aziz"=>"32", "Saleh"=>"23", "Zehad"=>"22");
+	foreach($age as $name => $years) {
+    echo "Key=" . $name . ", Value=" . $years . "<br>";
+    }
 ?>
