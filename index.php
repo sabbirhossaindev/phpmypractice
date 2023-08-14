@@ -278,15 +278,6 @@ $age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
 	}
 
 echo "<br>";
-echo "<b>পিএইচপি asort() example</b> <br>";
-$age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
-	asort($age);
-
-	foreach($age as $name => $age) {
-		echo "Key=" . $name . ", Value=" . $age . "<br>";
-	}
-
-echo "<br>";
 echo "<b>পিএইচপি ksort() example</b> <br>";
 $age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
 	ksort($age);
