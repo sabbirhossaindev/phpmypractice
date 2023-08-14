@@ -256,4 +256,42 @@ $age = array("Aziz"=>"32", "Saleh"=>"23", "Zehad"=>"22");
 	foreach($age as $name => $years) {
     echo "Key=" . $name . ", Value=" . $years . "<br>";
     }
+
+//পিএইচপি Array সর্টিং Example
+echo('<h3>PHP Array সর্টিং Example</h3> <hr>');
+
+echo "<b>পিএইচপি sort() example</b> <br>";
+$subject = array("HTML", "CSS", "JAVASCRIPT", "PHP");
+	sort($subject);
+	$arraylength = count($subject);
+
+	for($i = 0; $i < $arraylength; $i++){
+		echo $subject[$i] . "<br>";
+	}
+    
+echo "<br>";
+$age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
+	asort($age);
+
+	foreach($age as $name => $age) {
+		echo "Key=" . $name . ", Value=" . $age . "<br>";
+	}
+
+echo "<br>";
+echo "<b>পিএইচপি asort() example</b> <br>";
+$age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
+	asort($age);
+
+	foreach($age as $name => $age) {
+		echo "Key=" . $name . ", Value=" . $age . "<br>";
+	}
+
+echo "<br>";
+echo "<b>পিএইচপি asort() example</b> <br>";
+$age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
+	asort($age);
+
+	foreach($age as $name => $age) {
+		echo "Key=" . $name . ", Value=" . $age . "<br>";
+	}
 ?>
