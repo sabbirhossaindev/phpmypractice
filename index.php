@@ -287,11 +287,45 @@ $age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
 	}
 
 echo "<br>";
-echo "<b>পিএইচপি asort() example</b> <br>";
+echo "<b>পিএইচপি ksort() example</b> <br>";
 $age = array("Zehad"=>"22", "Saleh"=>"23", "Aziz"=>"32");
-	asort($age);
+	ksort($age);
 
 	foreach($age as $name => $age) {
-		echo "Key=" . $name . ", Value=" . $age . "<br>";
+	 echo "Key=" . $name . ", Value=" . $age . "<br>";
 	}
+
+echo "<br>";
+echo "<b>পিএইচপি rsort() example</b> <br>";
+$subject = array("HTML", "CSS", "JAVASCRIPT", "PHP");
+	rsort($subject);
+	$arraylength = count($subject);
+
+	for($i = 0; $i < $arraylength; $i++){
+		echo $subject[$i] . "<br>";
+	}
+
+echo "<br>";
+echo "<b>পিএইচপি arsort() example</b> <br>";
+$age = array("Zehad"=>"23", "Saleh"=>"22", "Aziz"=>"32");
+	arsort($age);
+
+	foreach($age as $name => $age) {
+	 echo "Key=" . $name . ", Value=" . $age . "<br>";
+	}
+
+echo "<br>";
+echo "<b>পিএইচপি krsort() example</b> <br>";
+$age = array("Zehad"=>"23", "Saleh"=>"22", "Aziz"=>"32");
+	krsort($age);
+
+	foreach($age as $name => $age) {
+	 echo "Key=" . $name . ", Value=" . $age . "<br>";
+	}
+
+echo "<br>";
+
+//php form Example
+echo('<h3>PHP Form Example</h3> <hr>');
+
 ?>
