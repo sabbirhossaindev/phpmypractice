@@ -384,11 +384,46 @@ echo fgets($myfile);
 fclose($myfile)."<br>";
 
 $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+// Output one character until end-of-file
+while(!feof($myfile)) {
+  echo fgetc($myfile);
+}
+fclose($myfile)."<br>";
+
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
 // Output one line until end-of-file
 while(!feof($myfile)) {
   echo fgets($myfile) . "<br>";
 }
-fclose($myfile)."<br>";
+fclose($myfile). "<br>";
 
+/*
+r	read only মোডে ফাইল ওপেন করে।
+ফাইল পয়েন্টার ফাইলের একেবারে প্রথম থেকে আরম্ভ হয়।
+w	write only মোডে ফাইল ওপেন করে।
+বিদ্যমান ফাইলের সকল কন্টেন্ট মুছে ফেলবে অথবা আগে থেকে ফাইল না থাকলে নতুন ফাইল তৈরি করবে। ফাইল পয়েন্টার ফাইলের একেবারে প্রথম থেকে আরম্ভ হয়।
+a	write only মোডে ফাইল ওপেন করে।
+বিদ্যমান ফাইলের সকল কন্টেন্ট সংরক্ষিত থাকবে। ফাইল পয়েন্টার ফাইলের একেবারে শেষ থেকে আরম্ভ হয়। পূর্বে থেকে ফাইল না থাকলে নতুন ফাইল তৈরি করবে।
+x	write only মোডে নতুন ফাইল তৈরি করে।
+যদি পূর্বে থেকে ফাইল বিদ্যমান থাকে তাহলে FALSE এবং error রিটার্ন করবে।
+r+	read/write মোডে ফাইল ওপেন করে।
+ফাইল পয়েন্টার ফাইলের একেবারে শুরু থেকে আরম্ভ হয়।
+w+	read/write মোডে ফাইল ওপেন করে।
+ফাইলে কোন তথ্য থাকলে মুছে যাবে। অথবা আগে থেকে ফাইল না থাকলে নতুন ফাইল তৈরি করে। ফাইল পয়েন্টার ফাইলের একেবারে প্রথম থেকে আরম্ভ হয়।
+a+	read/write মোডে ফাইল ওপেন করে।
+ফাইল থেকে পূর্বর তথ্য মুছে যাবে না, বরং নতুন তথ্য সংযোজন হবে। ফাইল পয়েন্টার ফাইলের একেবারে শেষ থেকে আরম্ভ হয়। এক্ষেত্রে আগে থেকে ফাইল না থাকলে নতুন ফাইল তৈরি করবে।
+x+	read/write মোডে নতুন ফাইল তৈরি করে।
+যদি পূর্বে থেকে ফাইল বিদ্যমান থাকে তাহলে FALSE এবং error রিটার্ন করবে।
+*/
+
+//PHP File Handling
+echo('<h3>PHP File Create/Write Example</h3> <hr>');
+
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "Sabbir Hossain\n";
+fwrite($myfile, $txt);
+$txt = "Sabbir Hossain\n";
+fwrite($myfile, $txt);
+fclose($myfile);
 
 ?>
