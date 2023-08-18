@@ -1,5 +1,7 @@
 <?php
 // php variable example;
+//php Advance topic Example
+echo('<h1>PHP Basic topic Example</h1> <hr>');
 
 
 // ai 4 ta diya ak file hote onno file a dta adan prodan kore jay
@@ -318,5 +320,75 @@ echo "<br>";
 
 //php form Example
 echo('<h3>PHP Form Example</h3> <hr>');
+
+//php Advance topic Example
+echo('<h1>PHP Advance topic Example</h1> <hr>');
+/*
+ d - মাসের মধ্যে একটি দিনকে রিপ্রেজেন্ট করে (১ থেকে ৩১)।
+m - মাসকে রিপ্রেজেন্ট করে (১ থেকে ১২)।
+Y - একটি বৎসরকে রিপ্রেজেন্ট করে (চার ডিজিটে)।
+l(ছোট অক্ষরের 'L') - সপ্তাহের একটি দিনকে রিপ্রেজেন্ট করে।
+*/
+//php date Example
+echo('<h3>PHP Date and Time Example</h3> <hr>');
+echo "Today is " . date("Y/m/d") . "<br>";
+echo "Today is " . date("Y.m.d") . "<br>";
+echo "Today is " . date("Y-m-d") . "<br>";
+echo "Today is " . date("l"). "<br>";
+echo "Today is " . date('d F Y, l'). "<br>"; // date month year and day
+
+// time exam ple
+/*
+h - 12-hour ফরম্যাটের ঘন্টাকে নির্দেশ করে যা শুন্য(০) থেকে শুরু হয়(00 থেকে 12)
+i - মিনিটকে নির্দেশ করে যা শুন্য(০) থেকে শুরু হয়(00 থেকে 59)
+s - সেকেন্ডকে নির্দেশ করে যা শুন্য(০) থেকে শুরু হয়(00 থেকে 59)
+a - ছোট অক্ষরের Ante meridiem(am) এবং Post meridiem(pm)
+*/
+date_default_timezone_set("Asia/Dhaka");
+echo "The time is " . date("h:i:sa")."<br>";
+
+$date= date('2023-08-25 10:27: 09');
+echo date('d F Y, h:i:s a', strtotime($date))."<br>";
+
+
+// $startdate = strtotime("Saturday");
+// $enddate = strtotime("+6 weeks", $startdate);
+// while ($startdate < $enddate) {
+//   echo date("M d", $startdate) . "<br>";
+//   $startdate = strtotime("+1 week", $startdate)."<br>";
+// }
+
+//php date Example
+echo('<h3>PHP include এবং require Example</h3> <hr>');
+/*
+include স্টেটমেন্ট শুধুমাত্র একটি warning দেখাবে (E_WARNING) কিন্তু স্ক্রিপ্টের এক্সিকিউশন বন্ধ করবে না।
+require স্টেটমেন্ট fatal error তৈরি করবে (E_COMPILE_ERROR) এবং স্ক্রিপ্টের এক্সিকিউশন বন্ধ করে দিবে।
+
+*/
+
+//PHP File Handling
+echo('<h3>PHP PHP File Handling Example</h3> <hr>');
+echo readfile("webdictionary.txt")."<br>";
+
+echo('<h3>PHP File Open/Read/Close Example</h3> <hr>');
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("webdictionary.txt"));
+fclose($myfile)."<br>";
+
+$myfile = fopen("webdictionary.txt", "r");
+// some code to be executed....
+fclose($myfile)."<br>";
+
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+echo fgets($myfile);
+fclose($myfile)."<br>";
+
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+// Output one line until end-of-file
+while(!feof($myfile)) {
+  echo fgets($myfile) . "<br>";
+}
+fclose($myfile)."<br>";
+
 
 ?>
