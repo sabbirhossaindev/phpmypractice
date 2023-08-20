@@ -425,5 +425,6 @@ fwrite($myfile, $txt);
 $txt = "Sabbir Hossain\n";
 fwrite($myfile, $txt);
 fclose($myfile);
+echo "newfile.txt file looks";
 
 ?>
