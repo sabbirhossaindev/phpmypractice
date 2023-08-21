@@ -434,4 +434,66 @@ fwrite($myfile, $txt);
 fclose($myfile);
 echo "newfile.txt file looks";
 
+echo('<h3>PHP session Example</h3> <hr>');
+// session_start();
+// session_unset();
+// session_destroy();
+
+echo('<h3>PHP callback function Example</h3> <hr>');
+function my_callback($item) {
+	return strlen($item);
+  }
+  
+  $strings = ["apple", "orange", "banana", "coconut"];
+  $lengths = array_map("my_callback", $strings);
+  print_r($lengths);
+
+//পিএইচপি ফিল্টার এর প্রকারভেদ
+echo('<h3>PHP filter Example</h3> <hr>');
+foreach (filter_list() as $id =>$filter) {
+	echo '<tr><td>' . $filter . '</td><td>' . filter_id($filter) . '</td></tr>';
+}
+
+$integer = 999;
+if (filter_var($integer, FILTER_VALIDATE_INT) !== false) {
+    echo(" ভ্যালিড ইন্টিজার  ");
+} else {
+    echo(" ইন্টিজার ভ্যালিড নয়");
+}
+
+
+echo('<h3>PHP error handling Example</h3> <hr>');
+/*
+Error এর বিভিন্ন লেভেল
+পিএইচপিতে বিভিন্ন টাইপের এরর সংঘটির হয়। নিম্নে error লেভেল এর ভ্যালুসহ বর্ণনা তুলে ধরা হল
+
+ভ্যালু	কনস্ট্যান্ট	বর্ণনা
+1	E_ERROR	Fatal run-time errors. এটা ঐ ধরণের এরর কে নির্দেশ করে যা রিকাভার(recover) করা যায়। যেমন- মেমোরি এলোকেশন। এটি স্ক্রিপ্ট এর এক্সিকিউশন থামিয়ে দেয়।
+2	E_WARNING	Fatal run-time errors। স্ক্রিপ্ট এর এক্সিকিউশন বন্ধ হবে না।
+4	E_PARSE	Compile-time parse errors। এই ধরণের এরর পার্সার কর্তৃক উৎপন্ন হয়।
+8	E_NOTICE	Run-time notices। স্ক্রিপ্টে এমন কিছু কোড থেকে যেখানে সম্ভবত এরর থাকতে পারে। এক্ষেত্রে স্ক্রিপ্টটি স্বাভাবিকভাবেই এক্সিকিউশন হয়।
+16	E_CORE_ERROR	Fatal errors। পিএইচপি শুরু হওয়ার সময়ই এধরণের এরর ঘটে। এটি E_ERROR এর মতই, শুধুমাত্র পার্থক্য হলো এটি কোর পিএইচপি কর্তৃক উৎপন্ন হয়।
+32	E_CORE_WARNING	Warnings (non-fatal errors)। পিএইচপি শুরু হওয়ার সময়ই এধরণের এরর ঘটে। এটি E_WARNING এর মতই, শুধুমাত্র পার্থক্য হলো এটি কোর পিএইচপি কর্তৃক উৎপন্ন হয়।
+64	E_COMPILE_ERROR	Fatal compile-time errors। এটি E_ERROR এর মতই, শুধুমাত্র পার্থক্য হলো এটি জেন্ড ইঞ্জিন কর্তৃক উৎপন্ন হয়।
+128	E_COMPILE_WARNING	Compile-time warnings (non-fatal errors)। এটি E_WARNING এর মতই, শুধুমাত্র পার্থক্য হলো এটি জেন্ড ইঞ্জিন কর্তৃক উৎপন্ন হয়।
+256	E_USER_ERROR	User-generated error messager। এটি E_ERROR এর মতই, শুধুমাত্র পার্থক্য হলো এটি পিএইচপি trigger_error() ফাংশনের মাধ্যমে উৎপন্ন হয়।
+512	E_USER_WARNING	User-generated warning message। এটি E_WARNING এর মতই, শুধুমাত্র পার্থক্য হলো এটি trigger_error() ফাংশনের মাধ্যমে উৎপন্ন হয়।
+1024	E_USER_NOTICE	User-generated notice message। এটি E_NOTICE এর মতই, শুধুমাত্র পার্থক্য হলো এটি trigger_error() ফাংশনের মাধ্যমে উৎপন্ন হয়।
+2048	E_STRICT	Enable to have PHP suggest changes to your code which will ensure the best interoperability and forward compatibility of your code.
+8192	E_DEPRECATED	Run-time notices. এটি Enable করা থাকলে যে সকল কোড পিএইচপির পরবর্তী ভার্সনে সাপোর্ট করবে না তাদের জন্য এমন ম্যাসেজ পাওয়া যায়।
+4096	E_RECOVERABLE_ERROR	Catchable fatal error। এটি E_ERROR এর মতই, শুধুমাত্র পার্থক্য হলো এটি ব্যবহারকারী কর্তৃক নিয়ন্ত্রণ করা সম্ভব।
+16384	E_USER_DEPRECATED	User-generated warning message। এটি E_DEPRECATED এর মতই, শুধুমাত্র পার্থক্য হলো এটি trigger_error() ফাংশনের মাধ্যমে উৎপন্ন হয়।
+32767	E_ALL	সব ধরণের errors এবং warnings রিটার্ন করে
+ */
+if(!file_exists("test.html")) {
+	die("ফাইলটি পাওয়া যায়নি!");
+  } else {
+	$file=fopen("test.html","r");
+}
+
+$test=9;
+if ($test>=5) {
+  trigger_error("Value must be 5 or below");
+}
+
 ?>

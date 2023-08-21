@@ -19,9 +19,9 @@ button {
 <body>
     <div>
         <!-- form 4 ta kaj action, method, enctype, & input field name -->
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="uploadfile.php" method="POST" enctype="multipart/form-data">
             <labe>choose file</label>
-                <input type="file" name="photo" required> <br> <br>
+                <input type="file" name="fileUpload" required> <br> <br>
                 <button type="submit">upload</button>
         </form>
         <br>
