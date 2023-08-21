@@ -345,7 +345,7 @@ s - সেকেন্ডকে নির্দেশ করে যা শুন
 a - ছোট অক্ষরের Ante meridiem(am) এবং Post meridiem(pm)
 */
 date_default_timezone_set("Asia/Dhaka");
-echo "The time is " . date("h:i:sa")."<br>";
+echo "The time is a " . date("h:i:sa")."<br>";
 
 $date= date('2023-08-25 10:27: 09');
 echo date('d F Y, h:i:s a', strtotime($date))."<br>";
@@ -415,6 +415,13 @@ a+	read/write মোডে ফাইল ওপেন করে।
 x+	read/write মোডে নতুন ফাইল তৈরি করে।
 যদি পূর্বে থেকে ফাইল বিদ্যমান থাকে তাহলে FALSE এবং error রিটার্ন করবে।
 */
+
+//সার্ভারে ফাইল ওপেন করে এবং সম্ভব না হলে এরর তৈরি করে।
+$file = fopen("newfile.txt", "r") or die("ফাইলটি ওপেন করা সম্ভব হচ্ছে না!");
+//ওপেন করা ফাইল পড়ে 
+echo fread($file,filesize("newfile.txt"));
+//ফাইল বন্ধ করে
+fclose($file);
 
 //PHP File Handling
 echo('<h3>PHP File Create/Write Example</h3> <hr>');
