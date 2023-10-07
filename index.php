@@ -434,6 +434,14 @@ fwrite($myfile, $txt);
 fclose($myfile);
 echo "newfile.txt file looks";
 
+
+$myfilepath = 'userlist.txt';
+$myopenfile = fopen($myfilepath, "a");
+$username = $_GET['username'];
+fwrite($myopenfile, $username, "Sabbir Hossain". PHP_EOL);
+fclose($myfilepath);
+header('Location: fileuser.php?msg= User Save In List');
+
 echo('<h3>PHP session Example</h3> <hr>');
 // session_start();
 // session_unset();
